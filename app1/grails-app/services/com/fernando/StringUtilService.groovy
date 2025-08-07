@@ -13,12 +13,12 @@ class StringUtilService {
     }
 
 
-    String capitalize(String string) {
-        if (!string) {
-            return string
+    String capitalize(String nomeCompleto) {
+        if (!nomeCompleto) {
+            return nomeCompleto
         }
-        return string.split().collect { word ->
-            word.capitalize()
+        return nomeCompleto.split().collect { palavra ->
+            palavra.capitalize()
         }.join(' ')
     }
 

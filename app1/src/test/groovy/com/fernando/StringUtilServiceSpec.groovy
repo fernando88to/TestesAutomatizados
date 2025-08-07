@@ -25,6 +25,12 @@ class StringUtilServiceSpec extends Specification implements ServiceUnitTest<Str
             service.capitalize('joão reis') == 'João Reis'
     }
 
+    void 'teste capitalize multiplas palavras e preposição'() {
+        expect:
+            service.capitalize('joão da reis') == 'João da Reis'
+            service.capitalize('Maria das Dores') == 'Maria das Dores'
+    }
+
     void 'teste removerAcentos com input null'() {
         expect:
             service.removerAcentos(null) == null
